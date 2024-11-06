@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Unggah dan Evaluasi</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hasil Evaluasi Model dengan File yang Diunggah</h1>
+        </header>
+        <section>
+            <p>File yang diunggah: <strong>{{ filename }}</strong></p>
+            <p><strong>Akurasi:</strong> {{ accuracy | round(2) * 100 }}%</p>
+            <p><strong>Presisi:</strong> {{ precision | round(2) * 100 }}%</p>
+            <a href="/pengembangan" class="btn">Kembali ke Pengembangan</a>
+            <a href="/" class="btn">Kembali ke Beranda</a>
+        </section>
+    </div>
+</body>
+</html>

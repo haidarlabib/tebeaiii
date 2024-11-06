@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Nutrisi</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Masukkan Data Nutrisi Minuman</h1>
+        </header>
+        <form action="/result" method="POST">
+            <label for="usia">Usia:</label>
+            <input type="number" id="usia" name="usia" required min="1" max="120">
+            
+            <label for="jenis_kelamin">Jenis Kelamin:</label>
+            <select id="jenis_kelamin" name="jenis_kelamin" required>
+                <option value="Pria">Pria</option>
+                <option value="Wanita">Wanita</option>
+            </select>
+            
+            <label for="status_gizi">Status Gizi:</label>
+            <select id="status_gizi" name="status_gizi" required>
+                <option value="Kurang Gizi">Kurang Gizi</option>
+                <option value="Normal">Normal</option>
+                <option value="Kelebihan Gizi">Kelebihan Gizi</option>
+            </select>
+            
+            <label for="takaran_saji">Takaran Saji (ml):</label>
+            <input type="number" id="takaran_saji" name="takaran_saji" required>
+            
+            <label for="jumlah_sajian">Jumlah Sajian per Kemasan:</label>
+            <input type="number" id="jumlah_sajian" name="jumlah_sajian" required>
+            
+            <label for="energi_total">Energi Total (kcal):</label>
+            <input type="number" id="energi_total" name="energi_total" required>
+            
+            <label for="energi_lemak">Energi dari Lemak (kcal):</label>
+            <input type="number" id="energi_lemak" name="energi_lemak" required>
+            
+            <label for="lemak_total">Lemak Total (g):</label>
+            <input type="number" id="lemak_total" name="lemak_total" required step="0.1">
+            
+            <label for="lemak_jenuh">Lemak Jenuh (g):</label>
+            <input type="number" id="lemak_jenuh" name="lemak_jenuh" required step="0.1">
+            
+            <label for="kolesterol">Kolesterol (mg):</label>
+            <input type="number" id="kolesterol" name="kolesterol" required>
+            
+            <label for="karbohidrat">Karbohidrat Total (g):</label>
+            <input type="number" id="karbohidrat" name="karbohidrat" required step="0.1">
+            
+            <label for="gula">Gula (g):</label>
+            <input type="number" id="gula" name="gula" required step="0.1">
+            
+            <label for="garam">Garam (g):</label>
+            <input type="number" id="garam" name="garam" required step="0.1">
+            
+            <label for="protein">Protein (g):</label>
+            <input type="number" id="protein" name="protein" required step="0.1">
+            
+            <button type="submit" class="btn">Prediksi</button>
+        </form>
+    </div>
+</body>
+</html>

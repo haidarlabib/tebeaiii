@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengembangan Agen Prediksi</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pengembangan Agen Prediksi Kesehatan Minuman</h1>
+        </header>
+        <section>
+            <h2>Model dan Algoritma</h2>
+            <p>
+                Aplikasi ini menggunakan algoritma <strong>Random Forest Classifier</strong> untuk memprediksi kesehatan minuman berdasarkan kandungan nutrisinya. 
+                Algoritma Random Forest bekerja dengan membuat banyak pohon keputusan dan menggabungkan hasilnya untuk mendapatkan prediksi yang lebih akurat.
+            </p>
+            
+            <h2>Data dan Fitur</h2>
+            <p>
+                Model dilatih menggunakan data nutrisi yang mencakup fitur-fitur berikut:
+            </p>
+            <ul>
+                <li><strong>Usia</strong> - Usia pengguna (tahun)</li>
+                <li><strong>Jenis Kelamin</strong> - Pria atau Wanita</li>
+                <li><strong>Takaran Saji (ml)</strong> - Volume per sajian</li>
+                <li><strong>Jumlah Sajian per Kemasan</strong> - Jumlah porsi per kemasan</li>
+                <li><strong>Energi Total (kcal)</strong> - Kalori total per sajian</li>
+                <li><strong>Energi dari Lemak (kcal)</strong> - Kalori yang berasal dari lemak</li>
+                <li><strong>Lemak Total (g)</strong> - Jumlah lemak total per sajian</li>
+                <li><strong>Lemak Jenuh (g)</strong> - Jumlah lemak jenuh per sajian</li>
+                <li><strong>Kolesterol (mg)</strong> - Jumlah kolesterol per sajian</li>
+                <li><strong>Karbohidrat Total (g)</strong> - Jumlah karbohidrat total per sajian</li>
+                <li><strong>Gula (g)</strong> - Jumlah gula per sajian</li>
+                <li><strong>Garam (g)</strong> - Jumlah garam per sajian</li>
+                <li><strong>Protein (g)</strong> - Jumlah protein per sajian</li>
+            </ul>
+            <p>
+                Fitur-fitur ini digunakan oleh model untuk menentukan apakah minuman yang dikonsumsi sehat atau tidak sehat.
+            </p>
+
+            <h2>Proses Pelatihan Model</h2>
+            <p>
+                Model dilatih dengan data yang berisi informasi nutrisi berbagai minuman. Label "Sehat" atau "Tidak Sehat" ditentukan berdasarkan aturan keseimbangan nutrisi.
+                Model Random Forest dilatih dengan data ini untuk mengklasifikasikan minuman ke dalam dua kategori berdasarkan kandungan nutrisinya.
+            </p>
+            
+            <h2>Evaluasi Kinerja</h2>
+            <p>
+                Model ini dievaluasi menggunakan metrik <strong>Accuracy</strong> dan <strong>Precision</strong>. Hasil evaluasi menunjukkan bahwa model memiliki akurasi yang cukup tinggi dalam memprediksi kesehatan minuman.
+            </p>
+            
+            <h2>Unggah Data untuk Pengembangan</h2>
+            <p>
+                Jika Anda ingin mengembangkan atau melatih ulang model dengan data baru, silakan unggah file data nutrisi Anda (format: <strong>.csv</strong> atau <strong>.xlsx</strong>).
+            </p>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <label for="file">Pilih File:</label>
+                <input type="file" id="file" name="file" accept=".csv, .xlsx" required>
+                <button type="submit" class="btn">Unggah File</button>
+            </form>
+
+            <a href="/" class="btn">Kembali ke Beranda</a>
+        </section>
+    </div>
+</body>
+</html>
